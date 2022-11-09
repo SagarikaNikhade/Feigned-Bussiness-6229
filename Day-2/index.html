@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        #navbar{
+            border:0px solid red;
+            background-color: white;
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+            width:100%;
+        }
+        #navbar>div{
+            border:0px solid greenyellow;
+            display: flex;
+           justify-content:flex-end; 
+        }
+        #navbar>#div1>div{
+            border:0px solid green;
+            text-align: center;
+            font-family:"poppins",sans-serif;
+            align-items: center;
+            width:28%;
+            height:auto;
+            display: flex;
+            justify-content: space-between; 
+        }
+        #navbar>#div1>div>div{
+            border:0px solid blue;
+            width:30%;
+            height:auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+           outline: none;
+        }
+        #navbar>#div1>div:nth-child(3){
+            background-color: black;
+            color:white;
+           height:25px;
+           width:10%;
+           font-weight: bold;
+        }
+        #navbar>#div2{
+            display: flex;
+            border:0px solid green;
+            justify-content: space-between;
+             align-items: center; 
+            text-align: center;
+            font-size:20px;
+            font-family:"poppins",sans-serif
+        }
+        #navbar>#div2>div{
+            border:0px solid blue;
+            width:8%;
+            height:auto;
+        }
+        #navbar>#div2>input:nth-child(4){
+            width:70%;
+            height:35px;
+            margin-bottom: 10px;
+        }
+        #up{
+            background-color: black;
+            color:white;
+        }
+        .top_select{
+            border: none;
+            outline: none;
+        }
+        * {box-sizing: border-box;}
+         body {font-family: Verdana, sans-serif;
+        }
+        .slideshow-container {
+          position: relative;
+          margin: auto;
+          width:100%;
+          border-bottom:1px solid black;
+            border-top:1px solid black;
+         }
+        .mySlides>img{
+            width:100%;
+        }
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+         }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="div1">
+            <div>
+                <div>US$</div>
+                <div>
+                    <select class="top_select">
+                        <option>Help</option>
+                        <option>Help Center</option>
+                        <option>Contact us</option>
+                        <option>About us</option>
+                        <option>Careers</option>
+                    </select>
+                </div>
+                <div id="up">Sign up or log in</div>
+
+            </div>
+        </div>
+        
+        <div id="div2">
+            <div>
+                <img src="PL.png" alt="logo"/>
+            </div>
+            <div>WOMEN</div>
+            <div>MEN</div>
+            <input oninput="search()" type="text" placeholder="SEARCH(E.G.VALENTINO DRESSES)">
+        </div>
+    </div>
+    <div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="https://cdna.lystit.com/cms/DESKTOP_XL_292112190c.png" />
+    </div>
+    <div class="mySlides fade">
+       <img src="https://cdna.lystit.com/cms/blackfriday_XL_2800_1050_23a75a1eaf.gif" />
+    </div>
+    </div>
+    <br>
+ 
+    <div style="text-align:center">
+       <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+
+
+
+</body>
+</html>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
