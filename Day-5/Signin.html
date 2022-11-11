@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        #navbar{
+            border:0px solid red;
+            background-color: white;
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+            width:100%;
+            border-bottom: 1px solid black;
+        }
+        #navbar>div{
+            border:0px solid greenyellow;
+            display: flex;
+           justify-content:flex-end; 
+        }
+        #navbar>#div1>div{
+            border:0px solid green;
+            text-align: center;
+            font-family:"poppins",sans-serif;
+            align-items: center;
+            width:28%;
+            height:auto;
+            display: flex;
+            justify-content: space-between; 
+        }
+        #navbar>#div1>div>div{
+            border:0px solid blue;
+            width:30%;
+            height:auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+           outline: none;
+        }
+        #navbar>#div1>div:nth-child(3){
+            background-color: black;
+            color:white;
+           height:25px;
+           width:10%;
+           font-weight: bold;
+        }
+        #navbar>#div2{
+            display: flex;
+            border:0px solid green;
+            justify-content: space-between;
+             align-items: center; 
+            text-align: center;
+            font-size:20px;
+            font-family:"poppins",sans-serif
+        }
+        #navbar>#div2>div{
+            border:0px solid blue;
+            width:8%;
+            height:auto;
+        }
+        #navbar>#div2>input:nth-child(4){
+            width:70%;
+            height:35px;
+            margin-bottom: 10px;
+        }
+        #up{
+            background-color: black;
+            color:white;
+        }
+        #login{
+            border:0px solid blue;
+            width:90%;
+            height:auto;
+            margin-top: 50px;
+            display: flex;
+            margin: auto;
+            margin-top: 50px;
+        }
+        #login>div{
+            border:0px solid red;
+            width:40%;
+            height:auto;
+            margin: auto;
+        }
+        #login>div>h1{
+            font-family:"poppins",sans-serif;
+        }
+        #login>div>p{
+            font-family:"poppins",sans-serif  
+        }
+        #login>div>input{
+          width:99%;
+          height:35px;
+        }
+        #login>div>button:nth-child(4){
+          width:100%;
+          margin-top: 20px;
+          height:35px;
+          background-color: black;
+          color:white;
+        }
+        #login>div>button{
+          width:100%;
+          margin-top: 20px;
+          height:35px;
+        }
+         #login>div>p:nth-child(5){
+           color:grey;
+           text-align: center;
+        }  
+        #login>div>p:nth-child(9){
+           color:grey;
+           text-align: center;
+           font-size:12px;
+        }
+        #footer{
+            border:0px solid blue;
+            width:90%;
+            height:auto;
+            margin-top: 50px;
+            display: flex;
+            margin: auto;
+            margin-top: 50px;
+           border-top: 1px solid black; 
+        }
+        #footer>div{
+            border:0px solid red;
+            width:30%;
+            height:auto;
+            margin: auto;
+        }
+        #footer>div:nth-child(2){
+            display: flex;
+        } 
+        #footer>div:nth-child(2){
+            width:40%;
+        }
+        #footer>div>div{
+        border:0px solid red;
+            width:40%;
+            height:auto;
+            margin: auto;
+            margin-top:30px ;
+        }
+        #footer>div>div>p{
+            font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        
+        /* #footer>div>div:nth-child(1){
+            margin-top: -1px;
+        } */
+        #footer>div>div>h2{
+            font-family: 'Roboto mono',monospace; 
+            font-size: 22px;
+            margin-bottom: 0;
+            text-transform: uppercase; 
+         }
+         #footer>div>img:nth-child(4){
+            width:40%;
+            border:0px solid red;
+            height:50px;
+            margin-bottom: -10px;
+            margin-left: -20px;
+         }
+         #footer>div>img:nth-child(5){
+            width:70%;
+            border:0px solid red;
+            height:60px;
+         }
+          #footer>div>h4{
+            font-family:"poppins",sans-serif;
+            color:darkslategrey;
+         } 
+         /* #footer>div>h4:nth-child(1){
+            margin-bottom: -10px;
+         } */
+        
+         #footer>div>img:nth-child(1){
+            width:30%;
+            border:0px solid red;
+            margin-left: -10px;
+            margin-bottom: -10px;
+         }
+        
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="div1">
+            <div>
+                <div>US$</div>
+                <div>
+                    <select class="top_select">
+                        <option>Help</option>
+                        <option>Help Center</option>
+                        <option>Contact us</option>
+                        <option>About us</option>
+                        <option>Careers</option>
+                    </select>
+                </div>
+                <div id="up">Sign up or log in</div>
+
+            </div>
+        </div>
+        
+        <div id="div2">
+            <div>
+                <a href="./index.html" target="_blank"><img src="PL.png" alt="logo"/></a>
+            </div>
+            <div>WOMEN</div>
+            <div>MEN</div>
+            <input oninput="search()" type="text" placeholder="SEARCH(E.G.VALENTINO DRESSES)">
+        </div>
+    </div>
+
+    <div id="login">
+        <div>
+            <h1>The only fashion site you need</h1>
+            <p>Email</p>
+            <input type="text" placeholder="Enter your email address to login or register">
+            <button>Continue</button>
+            <p>------------------------------------------OR-----------------------------------------</p>
+            <button>Continue with Google</button>
+            <button>Continue with Apple</button>
+            <button>Continue with Facebook</button>
+            <p>By creating an account, you consent to Lyst’s Terms & Conditions. To learn more about how Lyst uses and protects your personal data, please read Lyst’s Privacy Policy.</p>
+        </div>
+        <div></div>
+    </div>
+
+    <div id="footer">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUZLapcJ9iQcgr1XIxqfnaTj2OhsJ6yd0C3A&usqp=CAU" alt=""/>
+            <h4>TrustScore 4.4</h4>
+            <h4>2,917 reviews</h4>
+            <img src="https://static.vecteezy.com/system/resources/previews/002/445/920/original/social-media-facebook-instagram-logos-bundle-free-vector.jpg" alt=""/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpcerr2SWYq1l2OXV-OpH_CFRYP3FLZ9ypRg&usqp=CAU" alt=""/>
+            <p>Learn about the Lyst app for iPhone, iPad and Android.</p>
+            <p>© 2022 Lyst</p>
+        </div>
+        <div>
+            <div>
+                <h2>INTERNATIONAL</h2>
+                <p>Lyst-AU</p>
+                <p>Lyst-CA</p>
+                <p>Lyst-UK</p>
+                <p>Lyst-Osterreich</p>
+                <p>Lyst-Schweiz</p>
+                <p>Lyst-Deutschland</h4>
+                <p>Lyst-Espana</p>
+                <p>Lyst-France</p>
+                <p>Lyst-Italia</p>
+                <p>Lyst-Belgie</p>
+                <p>Lyst-Nederland</p>
+                <p>Lyst-India</p>
+            </div>
+            <div>
+                <h2>HELP AND INFO</h2>
+                <p>Help center</p>
+                <p>About us</p>
+                <p>Shipping policy</p>
+                <p>Returns policy</p>
+                <p>Payments</p>
+                <p>Refund policy</p>
+                <p>Developers</p>
+                <p>Careers</p>
+                <p>Contact</p>
+                <p>Terms & conditions</p>
+                <p>Privacy & cookie policy</p>
+                <p>Intellectual property</p>
+                <p>Categories</p>
+                <p>Become a partner</p>
+                <p>Lyst Insights</p>
+                <p>Lyst News</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    // function search(){
+    //     let q=document.querySelector("input").value;
+    //     console.log(q);
+    //     let newData=bag.filter(function(el){
+    //         return el.title.toLowerCase().includes(q.toLowerCase());
+    //     });
+    //     // console.log(newData);
+    //     displayCard(newData)
+    // }
+</script>
