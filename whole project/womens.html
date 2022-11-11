@@ -324,26 +324,26 @@
                 <div class="dropbtn">WOMEN</div>
                 <div id="myDropdown" class="dropdown-content">
                   <a href="./cloth.html">Clothing</a>
-                  <a href="./cloth.html">Shoes</a>
-                  <a href="./cloth.html">Accessories</a>
-                  <a href="./cloth.html">Bags</a>
-                  <a href="./cloth.html">Jewelry</a>
-                  <a href="./cloth.html">Brands</a>
-                  <a href="./cloth.html">All Women's</a>
-                  <a href="./cloth.html">Sale</a>
+                  <a href="#about">Shoes</a>
+                  <a href="#contact">Accessories</a>
+                  <a href="#home">Bags</a>
+                  <a href="#home">Jewelry</a>
+                  <a href="#home">Brands</a>
+                  <a href="#home">All Women's</a>
+                  <a href="#home">Sale</a>
                 </div>
             </div>
             <div class="dropdown">
                 <div class="dropbtn">MEN</div>
                 <div id="myDropdown" class="dropdown-content">
-                  <a href="./cloth.html">Clothing</a>
-                  <a href="./cloth.html">Shoes</a>
-                  <a href="./cloth.html">Accessories</a>
-                  <a href="./cloth.html">Bags</a>
-                  <a href="./cloth.html">Jewelry</a>
-                  <a href="./cloth.html">Brands</a>
-                  <a href="./cloth.html">All Women's</a>
-                  <a href="./cloth.html">Sale</a>
+                  <a href="#home">Clothing</a>
+                  <a href="#about">Shoes</a>
+                  <a href="#contact">Accessories</a>
+                  <a href="#home">Bags</a>
+                  <a href="#home">Jewelry</a>
+                  <a href="#home">Brands</a>
+                  <a href="#home">All Women's</a>
+                  <a href="#home">Sale</a>
                 </div>
             </div>
             <input oninput="search()" type="text" placeholder="SEARCH(E.G.VALENTINO DRESSES)">
@@ -831,4 +831,15 @@
        localStorage.setItem("cart-items",JSON.stringify(cartArr));
        //console.log(cartArr)
      }
+
+     let bag=[];
+     function search(){
+        let q=document.querySelector("input").value;
+        console.log(q);
+        let newData=bag.filter(function(el){
+            return el.name.toLowerCase().includes(q.toLowerCase());
+        });
+        // console.log(newData);
+        displayCard(newData)
+    }
 </script>
