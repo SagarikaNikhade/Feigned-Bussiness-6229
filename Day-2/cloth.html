@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+#cloth{
+    margin-top: 50px;
+}
+#cloth>div:nth-child(1){
+width:20%;
+border-right:1px solid black;
+}
+#navbar{
+            border:0px solid red;
+            background-color: white;
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+            width:100%;
+        }
+        #navbar>div{
+            border:0px solid greenyellow;
+            display: flex;
+           justify-content:flex-end; 
+        }
+        #navbar>#div1>div{
+            border:0px solid green;
+            text-align: center;
+            font-family:"poppins",sans-serif;
+            align-items: center;
+            width:28%;
+            height:auto;
+            display: flex;
+            justify-content: space-between; 
+        }
+        #navbar>#div1>div>div{
+            border:0px solid blue;
+            width:30%;
+            height:auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+           outline: none;
+        }
+        #navbar>#div1>div:nth-child(3){
+            background-color: black;
+            color:white;
+           height:25px;
+           width:10%;
+           font-weight: bold;
+        }
+        #navbar>#div2{
+            display: flex;
+            border:0px solid green;
+            justify-content: space-between;
+             align-items: center; 
+            text-align: center;
+            font-size:20px;
+            font-family:"poppins",sans-serif
+        }
+        #navbar>#div2>div{
+            border:0px solid blue;
+            width:8%;
+            height:auto;
+        }
+        #navbar>#div2>input:nth-child(4){
+            width:70%;
+            height:35px;
+            margin-bottom: 10px;
+        }
+        #up{
+            background-color: black;
+            color:white;
+        }
+        .top_select{
+            border: none;
+            outline: none;
+        }
+        body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+#myDropdown {
+  overflow: hidden;
+  border: 1px solid black; 
+} 
+
+#myDropdown a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} 
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color:black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+#myDropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#myDropdown a {
+  float: left;
+  color:black;
+  text-decoration: none;
+}
+
+#myDropdown a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.dropdown:hover #myDropdown {
+  display: block;
+}
+#cloth>a{
+    color:black;
+}
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="div1">
+            <div>
+                <div>US$</div>
+                <div>
+                    <select class="top_select">
+                        <option>Help</option>
+                        <option>Help Center</option>
+                        <option>Contact us</option>
+                        <option>About us</option>
+                        <option>Careers</option>
+                    </select>
+                </div>
+                <div id="up">Sign up or log in</div>
+
+            </div>
+        </div>
+        
+        <div id="div2">
+            <div>
+                <img src="PL.png" alt="logo"/>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">WOMEN</div>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Clothing</a>
+                  <a href="#about">Shoes</a>
+                  <a href="#contact">Accessories</a>
+                  <a href="#home">Bags</a>
+                  <a href="#home">Jewelry</a>
+                  <a href="#home">Brands</a>
+                  <a href="#home">All Women's</a>
+                  <a href="#home">Sale</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">MEN</div>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="./cloth.html">Clothing</a>
+                  <a href="#about">Shoes</a>
+                  <a href="#contact">Accessories</a>
+                  <a href="#home">Bags</a>
+                  <a href="#home">Jewelry</a>
+                  <a href="#home">Brands</a>
+                  <a href="#home">All Women's</a>
+                  <a href="#home">Sale</a>
+                </div>
+            </div>
+            <input oninput="search()" type="text" placeholder="SEARCH(E.G.VALENTINO DRESSES)">
+        </div>
+    </div>
+
+    <div id="cloth">
+        <div>
+            <p>Clothing</p>
+            <p>Beachwear and swimwear outfits</p>
+            <p>Coats</p>
+            <a target="_blank" href="./womens.html"><p>Dresses</p></a>
+            <p>Hosiery</p>
+            <p>Jackets</p>
+            <p>Jeans</p>
+            <p>Jumpsuits and rompers</p>
+            <p>sweaters and knitwear</p>
+            <p>Lingerie</p>
+            <p>Nightwear and sleepwear</p>
+            <p>+More</p>
+        </div>
+        <div></div>
+    </div>
+</body>
+</html>
