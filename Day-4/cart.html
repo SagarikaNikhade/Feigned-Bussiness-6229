@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+         #navbar{
+            border-bottom:1px solid black;
+            background-color: white;
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+            width:100%;
+        }
+        #navbar>div{
+            border:0px solid greenyellow;
+            display: flex;
+           justify-content:flex-end; 
+        }
+        #navbar>#div1>div{
+            border:0px solid green;
+            text-align: center;
+            font-family:"poppins",sans-serif;
+            align-items: center;
+            width:28%;
+            height:auto;
+            display: flex;
+            justify-content: space-between; 
+        }
+        #navbar>#div1>div>div{
+            border:0px solid blue;
+            width:30%;
+            height:auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+           outline: none;
+        }
+        #navbar>#div1>a{
+            background-color: black;
+            color:white;
+           height:25px;
+           width:10%;
+           font-weight: bold;
+        }
+        #navbar>#div2{
+            display: flex;
+            border:0px solid green;
+            justify-content: space-between;
+             align-items: center; 
+            text-align: center;
+            font-size:20px;
+            font-family:"poppins",sans-serif
+        }
+        #navbar>#div2>div{
+            border:0px solid blue;
+            width:8%;
+            height:auto;
+        }
+        #navbar>#div2>input:nth-child(4){
+            width:70%;
+            height:35px;
+            margin-bottom: 10px;
+        }
+        #div2>div>a>img{
+         width:60%;
+       }
+        #up{
+            background-color: black;
+            color:white;
+        }
+        .top_select{
+            border: none;
+            outline: none;
+        }
+        #container{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:20px;
+            border:1px solid black;
+        }
+        #container>div>img{
+            width:100%;
+            height:200px;
+        }
+        #container>div{
+            text-align: center;
+            padding-bottom: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        /* #okay{
+          border:1px solid red;
+          display: flex;
+          margin:auto;
+
+        } */
+          
+         #pay{
+            display: flex;
+            border-bottom:1px solid black;
+            justify-content: space-around;
+         }
+        #pay>h1{
+            border:0px solid red;
+            font-family: var(--_1rdk21w2a);
+            font-weight: var(--_1rdk21w2b);
+        }
+        #pay>a{
+            border:0px solid red;
+            width:30%;
+           }
+        #pay>a>button{
+            width:100%;
+            height:40px;
+            text-align: center;
+            cursor: pointer;
+            margin-top:20px;
+            background-color: black;
+            color:white;
+        }
+        #okay{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="div1">
+            <div>
+                <div>IN-US$</div>
+                <div>
+                    <select class="top_select">
+                        <option>Help</option>
+                        <option>Help Center</option>
+                        <option>Contact us</option>
+                        <option>About us</option>
+                        <option>Careers</option>
+                    </select>
+                </div>
+                <a href="./login.html"><div id="up">Sign up or log in</div></a>
+
+            </div>
+        </div>
+        
+        <div id="div2">
+            <div>
+              <a href="./index.html" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROgJKF5nwGicUcu_mPSx0GMC2GkVh9bS_PHQ&usqp=CAU" alt="logo"/></a>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">WOMEN</div>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">MEN</div>
+            </div>
+            <input oninput="search()" type="text" placeholder="SEARCH(E.G.VALENTINO DRESSES)">
+        </div>
+        </div>
+
+        <div id="pay">
+            <h1>Shopping Bag</h1>
+            <a href="./payment.html"><button>Place Order</button></a> 
+        </div>
+    
+     <div id="okay">
+        <div> <h1>Total items:<span></span></h1></div>
+        <div><h2>Total Price:<span></span></h1></div>
+    </div> 
+     <div id="container"></div>
+    
+
+    
+   
+    
+
+    
+</body>
+</html>
+
+<script>
+    let cartItemsfromLS=JSON.parse(localStorage.getItem("cart-items"));
+    console.log(cartItemsfromLS);
+
+     let total_price=cartItemsfromLS.reduce(function(acc,el){
+        return acc+el.price;
+     },0);
+    console.log(total_price)
+     document.querySelector("h2>span").innerText=total_price
+    
+
+     document.querySelector("h1>span").innerText=cartItemsfromLS.length;
+
+    cartItemsfromLS.forEach(function(el,i){
+       let card=document.createElement("div")
+
+       let productImg=document.createElement("img")
+       productImg.src=el.image_url;
+
+       let title=document.createElement("h3")
+       title.innerText=el.name;
+
+       let price=document.createElement("p")
+       price.innerText=el.price;
+
+       let btn=document.createElement("button")
+       btn.innerText="Remove"
+       btn.addEventListener("click",function(){
+            deleteData(el,i)
+        })
+
+       card.append(productImg,title,price,btn)
+      
+       document.querySelector("#container").append(card)
+})
+
+function deleteData(el,i){
+    cartItemsfromLS.splice(el,i)
+    console.log(cartItemsfromLS)
+     displayTable(cartItemsfromLS)
+    localStorage.setItem("delete-lyst",JSON.stringify(cartItemsfromLS));
+}
+   
+
+</script>

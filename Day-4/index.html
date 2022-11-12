@@ -89,7 +89,7 @@
             margin-top: 10px;
            outline: none;
         }
-        #navbar>#div1>div:nth-child(3){
+        #navbar>#div1>a{
             background-color: black;
             color:white;
            height:25px;
@@ -324,6 +324,53 @@
         width:100%;
        height:300px;
        }
+       #div2>div>a>img{
+         width:60%;
+       }
+       #slider3{
+        border-bottom:1px solid black;
+        border-top:1px solid black;
+        width:100%;
+        height:400px;
+        display: flex;
+        margin-top: 50px;
+        height:auto;
+        background-color: #cafc4f ;
+       }
+       #slider3>div{
+        border-left:1px solid black;
+        width:60%;
+        background-color: #f5f4f2 ;
+       }
+       #slider3>div:nth-child(2){
+        width:30%;
+        background-color: #cafc4f ;
+        font-size: 45px;
+    letter-spacing: -1px;
+    /* line-height: 50px; */
+    line-height: .9;
+    
+    text-transform: uppercase;
+       }
+       #slider3>div:nth-child(2)>a>button{
+        background-color: #000;
+        color:white;
+        width:30%;
+        height:60px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+       }
+       #slider3>.spider{
+        display: flex;
+       }
+       #slider3>.spider>div>h1:nth-child(1){
+        font-size:60px;
+       }
+       #slider3>.spider>div>p{
+        font-size: 14px;
+        line-height: 24px;
+       }
+
         /* medium screen */
         @media all and (min-width:501px) and (max-width:700px){
         .grid{
@@ -352,7 +399,7 @@
     <div id="navbar">
         <div id="div1">
             <div>
-                <div>US$</div>
+                <div>IN-US$</div>
                 <div>
                     <select class="top_select">
                         <option>Help</option>
@@ -362,39 +409,39 @@
                         <option>Careers</option>
                     </select>
                 </div>
-                <div id="up">Sign up or log in</div>
+                <a href="./login.html"><div id="up">Sign up or log in</div></a>
 
             </div>
         </div>
         
         <div id="div2">
             <div>
-              <a href="./index.html" target="_blank"><img src="PL.png" alt="logo"/></a>
+              <a href="./index.html" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROgJKF5nwGicUcu_mPSx0GMC2GkVh9bS_PHQ&usqp=CAU" alt="logo"/></a>
             </div>
             <div class="dropdown">
                 <div class="dropbtn">WOMEN</div>
                 <div id="myDropdown" class="dropdown-content">
-                  <a href="./cloth.html">Clothing</a>
-                  <a href="./cloth.html">Shoes</a>
-                  <a href="./cloth.html">Accessories</a>
-                  <a href="./cloth.html">Bags</a>
-                  <a href="./cloth.html">Jewelry</a>
-                  <a href="./cloth.html">Brands</a>
-                  <a href="./cloth.html">All Women's</a>
-                  <a href="./cloth.html">Sale</a>
+                  <a href="./cloth.html" target="_blank">Clothing</a>
+                  <a href="./cloth.html" target="_blank">Shoes</a>
+                  <a href="./cloth.html" target="_blank">Accessories</a>
+                  <a href="./cloth.html" target="_blank">Bags</a>
+                  <a href="./cloth.html" target="_blank">Jewelry</a>
+                  <a href="./cloth.html" target="_blank">Brands</a>
+                  <a href="./cloth.html" target="_blank">All Women's</a>
+                  <a href="./cloth.html" target="_blank">Sale</a>
                 </div>
             </div>
             <div class="dropdown">
                 <div class="dropbtn">MEN</div>
                 <div id="myDropdown" class="dropdown-content">
-                  <a href="cloth.html">Clothing</a>
-                  <a href="./cloth.html">Shoes</a>
-                  <a href="./cloth.html">Accessories</a>
-                  <a href="./cloth.html">Bags</a>
-                  <a href="./cloth.html">Jewelry</a>
-                  <a href="./cloth.html">Brands</a>
-                  <a href="./cloth.html">All Women's</a>
-                  <a href="./cloth.html">Sale</a>
+                  <a href="./cloth.html" target="_blank">Clothing</a>
+                  <a href="./cloth.html" target="_blank">Shoes</a>
+                  <a href="./cloth.html" target="_blank">Accessories</a>
+                  <a href="./cloth.html" target="_blank">Bags</a>
+                  <a href="./cloth.html" target="_blank">Jewelry</a>
+                  <a href="./cloth.html" target="_blank">Brands</a>
+                  <a href="./cloth.html" target="_blank">All Women's</a>
+                  <a href="./cloth.html" target="_blank">Sale</a>
                 </div>
             </div>
             <input oninput="search()" type="text" placeholder="SEARCH(E.G.VALENTINO DRESSES)">
@@ -469,7 +516,35 @@
     </div> 
 </div> 
 
-
+<div id="slider3">
+  <div class="spider">
+    <div>
+      <h1>1</h1>
+      <h1>THE BIGGEST SELECTION</h1>
+      <p>Shop over 12,000 brands and stores in one place.</p>
+      <p>Find exactly what you want with powerful search and personal recommendations.</p>
+    </div>
+    <div>
+      <h1>2</h1>
+      <h1>THE HOTTEST PRODUCTS</h1>
+      <p>See what’s new and what’s trending.</p>
+      <p>Hit the heart to receive alerts on the latest drops from your favourite brands.</p>
+    </div>
+    <div>
+      <h1>3</h1>
+      <h1>THE BEST PRICES</h1>
+      <p>Compare prices and shipping options across thousands of stores.</p>
+      <p>Lyst members are notified when an item goes on sale.</p>
+    </div>
+  </div>
+  <div>
+    <p>SIGN UP</p>
+    <p>FOR</p>
+    <p>SMARTER</p>
+    <p>SHOPPING</p>
+    <a href="./signup.html"><button>Join-></button></a>
+  </div>
+</div>
 
     <div id="footer">
         <div>
@@ -517,7 +592,7 @@
                 <p>Lyst News</p>
             </div>
         </div>
-    </div>s
+    </div>
 
 
 </body>
