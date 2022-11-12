@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        .product{
+           display:flex;
+           border:0px solid blue;
+           width:100%;
+           margin: auto;
+        }
+        #card{
+            border:0px solid green;
+            width:40%; 
+        }
+        #container{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            border:0px solid red;
+        }
+        #container>div>img{
+            width:100%;
+            height:400px;
+        }
+        #container>div{
+            padding-top: 20px;
+            border:1px solid black;
+        }
+        .product1{
+            border:0px solid red;
+            display: flex;
+        }
+        .product1>div{
+            border:0px solid blue;
+            display: flex;
+            width:82%;
+            justify-content: space-between;
+            font-family: serif;
+        }
+         .product1>div:nth-child(1){
+            width:18%;
+            font-size: 30px;
+            margin-top: 10px;
+        } 
+        .product1>div>div>select{
+            border:1px solid black;
+            margin: auto;
+            width:100%;
+            height:40px;
+            margin-top:15px;
+            appearance: none;
+            background: #fff;
+            border: 1px solid #000;
+            border-radius: 1px;
+            font-size: 14px;
+            font-weight: 600;
+             padding: 8px 44px 8px 24px;
+        }
+        #navbar{
+            border:0px solid red;
+            background-color: white;
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+            width:100%;
+        }
+        #navbar>div{
+            border:0px solid greenyellow;
+            display: flex;
+           justify-content:flex-end; 
+        }
+        #navbar>#div1>div{
+            border:0px solid green;
+            text-align: center;
+            font-family:"poppins",sans-serif;
+            align-items: center;
+            width:28%;
+            height:auto;
+            display: flex;
+            justify-content: space-between; 
+        }
+        #navbar>#div1>div>div{
+            border:0px solid blue;
+            width:30%;
+            height:auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+           outline: none;
+        }
+        #navbar>#div1>a{
+            background-color: black;
+            color:white;
+           height:25px;
+           width:10%;
+           font-weight: bold;
+        }
+        #navbar>#div2{
+            display: flex;
+            border:0px solid green;
+            justify-content: space-between;
+             align-items: center; 
+            text-align: center;
+            font-size:20px;
+            font-family:"poppins",sans-serif
+        }
+        #navbar>#div2>div{
+            border:0px solid blue;
+            width:8%;
+            height:auto;
+        }
+        #navbar>#div2>input:nth-child(4){
+            width:70%;
+            height:35px;
+            margin-bottom: 10px;
+        }
+        #up{
+            background-color: black;
+            color:white;
+        }
+        .top_select{
+            border: none;
+            outline: none;
+        }
+        body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+#myDropdown {
+  overflow: hidden;
+  border: 1px solid black; 
+} 
+
+#myDropdown a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} 
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color:black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+#myDropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#myDropdown a {
+  float: left;
+  color:black;
+  text-decoration: none;
+  background-color: white;
+}
+
+#myDropdown a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.dropdown:hover #myDropdown {
+  display: block;
+}
+        * {box-sizing: border-box;}
+         body {font-family: Verdana, sans-serif;
+        }
+        .slideshow-container {
+          position: relative;
+          margin: auto;
+          width:100%;
+          border-bottom:1px solid black;
+            border-top:1px solid black;
+         }
+        .mySlides>img{
+            width:100%;
+        }
+        #footer{
+            border:0px solid blue;
+            width:90%;
+            height:auto;
+            margin-top: 50px;
+            display: flex;
+            margin: auto;
+            margin-top: 50px;
+           border-top: 1px solid black; 
+        }
+        #footer>div{
+            border:0px solid red;
+            width:30%;
+            height:auto;
+            margin: auto;
+        }
+        #footer>div:nth-child(2){
+            display: flex;
+        } 
+        #footer>div:nth-child(2){
+            width:40%;
+        }
+        #footer>div>div{
+        border:0px solid red;
+            width:40%;
+            height:auto;
+            margin: auto;
+            margin-top:30px ;
+        }
+        #footer>div>div>p{
+            font-family: Suisse Intl,Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        
+        /* #footer>div>div:nth-child(1){
+            margin-top: -1px;
+        } */
+        #footer>div>div>h2{
+            font-family: 'Roboto mono',monospace; 
+            font-size: 22px;
+            margin-bottom: 0;
+            text-transform: uppercase; 
+         }
+         #footer>div>img:nth-child(4){
+            width:40%;
+            border:0px solid red;
+            height:50px;
+            margin-bottom: -10px;
+            margin-left: -20px;
+         }
+         #footer>div>img:nth-child(5){
+            width:70%;
+            border:0px solid red;
+            height:60px;
+         }
+          #footer>div>h4{
+            font-family:"poppins",sans-serif;
+            color:darkslategrey;
+         } 
+         /* #footer>div>h4:nth-child(1){
+            margin-bottom: -10px;
+         } */
+        
+         #footer>div>img:nth-child(1){
+            width:30%;
+            border:0px solid red;
+            margin-left: -10px;
+            margin-bottom: -10px;
+         }
+         .grid{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: auto;
+        border: 0px solid red;
+       } 
+      
+       .grid>div{
+        border: 1px solid black;
+        display: flex;
+        height:auto;
+       }
+       .grid>div>div{
+        border:0px solid red;
+        height:auto;
+        margin: auto;
+       }
+       .grid>div>div:nth-child(1){
+        width:20%;
+        transform:rotate(-90deg);
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 1;
+        padding: 5px;
+        left: 100%;
+        
+       }
+        .grid>div>div>img{
+        width:100%;
+        height:300px;
+       
+       }
+        .grid1{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: auto;
+        border: 0px solid red;
+       } 
+      
+       .grid1>div{
+        border: 1px solid black;
+        display: flex;
+        height:auto;
+       }
+       .grid1>div>div{
+        border:0px solid red;
+        height:auto;
+        margin: auto;
+       }
+       .grid1>div>div:nth-child(1){
+        width:20%;
+        transform:rotate(-90deg);
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 1;
+        padding: 5px;
+        left: 100%;
+        
+       }
+        .grid1>div>div>img{
+        width:100%;
+       height:300px;
+       }
+       #div2>div>a>img{
+         width:60%;
+       }
+        /* medium screen */
+        @media all and (min-width:501px) and (max-width:700px){
+        .grid{
+        grid-template-columns: repeat(2,1fr);
+        }
+        .grid1{
+        grid-template-columns: repeat(2,1fr);
+        }
+       }
+      
+       /* small screen */
+       @media all and (min-width:100px) and (max-width:500px){
+        .grid{
+        grid-template-columns: repeat(1,1fr);
+        }
+        .grid1{
+        grid-template-columns: repeat(1,1fr);
+        }
+        @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+         }
+    }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="div1">
+            <div>
+                <div>IN-US$</div>
+                <div>
+                    <select class="top_select">
+                        <option>Help</option>
+                        <option>Help Center</option>
+                        <option>Contact us</option>
+                        <option>About us</option>
+                        <option>Careers</option>
+                    </select>
+                </div>
+                <a href="./login.html"><div id="up">Sign up or log in</div></a>
+
+            </div>
+        </div>
+        
+        <div id="div2">
+            <div>
+              <a href="./index.html" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROgJKF5nwGicUcu_mPSx0GMC2GkVh9bS_PHQ&usqp=CAU" alt="logo"/></a>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">WOMEN</div>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="./cloth.html" target="_blank">Clothing</a>
+                  <a href="./cloth.html" target="_blank">Shoes</a>
+                  <a href="./cloth.html" target="_blank">Accessories</a>
+                  <a href="./cloth.html" target="_blank">Bags</a>
+                  <a href="./cloth.html" target="_blank">Jewelry</a>
+                  <a href="./cloth.html" target="_blank">Brands</a>
+                  <a href="./cloth.html" target="_blank">All Women's</a>
+                  <a href="./cloth.html" target="_blank">Sale</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">MEN</div>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="./cloth.html" target="_blank">Clothing</a>
+                  <a href="./cloth.html" target="_blank">Shoes</a>
+                  <a href="./cloth.html" target="_blank">Accessories</a>
+                  <a href="./cloth.html" target="_blank">Bags</a>
+                  <a href="./cloth.html" target="_blank">Jewelry</a>
+                  <a href="./cloth.html" target="_blank">Brands</a>
+                  <a href="./cloth.html" target="_blank">All Women's</a>
+                  <a href="./cloth.html" target="_blank">Sale</a>
+                </div>
+            </div>
+            <input oninput="search()" type="text" placeholder="SEARCH(E.G.VALENTINO DRESSES)">
+        </div>
+    </div>
+    <div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="https://cdna.lystit.com/cms/DESKTOP_XL_292112190c.png" />
+    </div>
+    <div class="mySlides fade">
+       <img src="https://cdna.lystit.com/cms/blackfriday_XL_2800_1050_23a75a1eaf.gif" />
+    </div>
+    </div>
+    <br>
+ 
+    <div style="text-align:center">
+       <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+
+    <div onclick="slide()" class="grid">
+        <div>
+            <div>WHAT TO WISHLIST NOW</div>
+           <div><img src="https://cdna.lystit.com/cms/5_C90_EA_3_D_C641_4_C59_AEE_7_729_E7036_BCF_1_ea93f2a099.PNG" alt=""/></div>
+       </div> 
+   
+       <div>
+           <div>AHEAD OF THE TREND</div>
+          <div><img src="https://cdna.lystit.com/cms/791d5cce_14ec_4b7a_b6df_6cb35f1abf9c_0e299e3b12.png" alt=""/></div>
+       </div> 
+       
+       <div>
+         <div>JUST LANDED: LOEWE F/W '22</div>
+         <div><img src="https://cdna.lystit.com/cms/f78e6396_e4f3_4c06_b8da_e9a03e5cd2e6_8a37c6d66c.png" alt=""/></div>
+       </div> 
+       
+       <div>
+         <div>IF YOU ONLY BUY ONE THING</div>
+         <div><img src="https://cdna.lystit.com/cms/660e7499_cd9e_4185_ab62_d391ade33995_ba91f9c180.png" alt=""/></div>
+       </div> 
+      
+        <div>
+          <div>STRATEGIC BUYS</div>
+          <div><img src="https://cdna.lystit.com/cms/b64f1667_734e_4565_ada8_f8fd0a6fefc9_0fac2b73d5.png" alt=""/></div>
+       </div> 
+    </div>
+
+    <div onclick="slide1()" class="grid1"> 
+     <div>
+         <div>Ferragamo SS23 Preview</div>
+        <div><img src="https://cdna.lystit.com/cms/Q4_Nov_Lyst_Homepage_Top_Lyst_Banner_600x600_US_8d5732b497.jpg" alt=""/></div>
+    </div> 
+
+    <div>
+        <div>Shop the latest Fear of God ESSENTIALS at SSENSE</div>
+       <div><img src="https://cdna.lystit.com/cms/ssense_600_x_600_woman_a1d11da9ce.jpg" alt=""/></div>
+    </div> 
+    
+    <div>
+      <div>Boden Up to 15% Off + Free Shipping When You Spend $49 with Code F2L9</div>
+      <div><img src="https://cdna.lystit.com/cms/600x600_Boden_7_Nov_6e206863ac.jpg" alt=""/></div>
+    </div> 
+    
+    <div>
+      <div>SABRINA ZENG | Sustainable Designer Leather Goods</div>
+      <div><img src="https://cdna.lystit.com/cms/SZ_LYST_Hammock_Camel_1_bc0dd8c317.jpg" alt=""/></div>
+    </div> 
+   
+     <div>
+       <div>Voted one of best stores in the world VougeItalia</div>
+       <div><img src="https://cdna.lystit.com/cms/madison_beverly_hills_lyst_63f59bd7db.jpg" alt=""/></div>
+    </div> 
+</div> 
+
+
+
+    <div id="footer">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUZLapcJ9iQcgr1XIxqfnaTj2OhsJ6yd0C3A&usqp=CAU" alt=""/>
+            <h4>TrustScore 4.4</h4>
+            <h4>2,917 reviews</h4>
+            <img src="https://static.vecteezy.com/system/resources/previews/002/445/920/original/social-media-facebook-instagram-logos-bundle-free-vector.jpg" alt=""/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpcerr2SWYq1l2OXV-OpH_CFRYP3FLZ9ypRg&usqp=CAU" alt=""/>
+            <p>Learn about the Lyst app for iPhone, iPad and Android.</p>
+            <p>© 2022 Lyst</p>
+        </div>
+        <div>
+            <div>
+                <h2>INTERNATIONAL</h2>
+                <p>Lyst-AU</p>
+                <p>Lyst-CA</p>
+                <p>Lyst-UK</p>
+                <p>Lyst-Osterreich</p>
+                <p>Lyst-Schweiz</p>
+                <p>Lyst-Deutschland</h4>
+                <p>Lyst-Espana</p>
+                <p>Lyst-France</p>
+                <p>Lyst-Italia</p>
+                <p>Lyst-Belgie</p>
+                <p>Lyst-Nederland</p>
+                <p>Lyst-India</p>
+            </div>
+            <div>
+                <h2>HELP AND INFO</h2>
+                <p>Help center</p>
+                <p>About us</p>
+                <p>Shipping policy</p>
+                <p>Returns policy</p>
+                <p>Payments</p>
+                <p>Refund policy</p>
+                <p>Developers</p>
+                <p>Careers</p>
+                <p>Contact</p>
+                <p>Terms & conditions</p>
+                <p>Privacy & cookie policy</p>
+                <p>Intellectual property</p>
+                <p>Categories</p>
+                <p>Become a partner</p>
+                <p>Lyst Insights</p>
+                <p>Lyst News</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
+    function slide1(){
+    document.querySelector(".grid1").style.marginRight="100px";
+  }
+    </script>
