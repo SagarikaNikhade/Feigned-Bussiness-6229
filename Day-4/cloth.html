@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+#cloth{
+    margin-top: 50px;
+}
+#cloth>div:nth-child(1){
+width:20%;
+border-right:1px solid black;
+}
+#navbar{
+           border-bottom:1px solid black;
+            background-color: white;
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+            width:100%;
+        }
+        #navbar>div{
+            border:0px solid greenyellow;
+            display: flex;
+           justify-content:flex-end; 
+        }
+        #navbar>#div1>div{
+            border:0px solid green;
+            text-align: center;
+            font-family:"poppins",sans-serif;
+            align-items: center;
+            width:28%;
+            height:auto;
+            display: flex;
+            justify-content: space-between; 
+        }
+        #navbar>#div1>div>div{
+            border:0px solid blue;
+            width:30%;
+            height:auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+           outline: none;
+        }
+        #navbar>#div1>div:nth-child(3){
+            background-color: black;
+            color:white;
+           height:25px;
+           width:10%;
+           font-weight: bold;
+        }
+        #navbar>#div2{
+            display: flex;
+            border:0px solid green;
+            justify-content: space-between;
+             align-items: center; 
+            text-align: center;
+            font-size:20px;
+            font-family:"poppins",sans-serif
+        }
+        #navbar>#div2>div{
+            border:0px solid blue;
+            width:8%;
+            height:auto;
+        }
+        #navbar>#div2>input:nth-child(4){
+            width:70%;
+            height:35px;
+            margin-bottom: 10px;
+        }
+        #up{
+            background-color: black;
+            color:white;
+        }
+        .top_select{
+            border: none;
+            outline: none;
+        }
+        body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+ #myDropdown {
+  overflow: hidden;
+  border: 1px solid black; 
+} 
+
+#myDropdown a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} 
+
+ .dropdown {
+  float: left;
+  overflow: hidden;
+} 
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color:black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+#myDropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#myDropdown a {
+  float: left;
+  color:black;
+  text-decoration: none;
+}
+
+#myDropdown a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+ .dropdown:hover #myDropdown {
+  display: block;
+} 
+#cloth>a{
+    color:black;
+}
+#div2>div>a>img{
+    width:60%;
+}
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="div1">
+            <div>
+                <div>US$</div>
+                <div>
+                    <select class="top_select">
+                        <option>Help</option>
+                        <option>Help Center</option>
+                        <option>Contact us</option>
+                        <option>About us</option>
+                        <option>Careers</option>
+                    </select>
+                </div>
+                <div id="up">Sign up or log in</div>
+
+            </div>
+        </div>
+        
+        <div id="div2">
+            <div>
+                <a href="./index.html" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROgJKF5nwGicUcu_mPSx0GMC2GkVh9bS_PHQ&usqp=CAU" alt="logo"/></a>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">WOMEN</div>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="./cloth.html">Clothing</a>
+                    <a href="./cloth.html">Shoes</a>
+                    <a href="./cloth.html">Accessories</a>
+                    <a href="./cloth.html">Bags</a>
+                    <a href="./cloth.html">Jewelry</a>
+                    <a href="./cloth.html">Brands</a>
+                    <a href="./cloth.html">All Women's</a>
+                    <a href="./cloth.html">Sale</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">MEN</div>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="./cloth.html">Clothing</a>
+                  <a href="./cloth.html">Shoes</a>
+                  <a href="./cloth.html">Accessories</a>
+                  <a href="./cloth.html">Bags</a>
+                  <a href="./cloth.html">Jewelry</a>
+                  <a href="./cloth.html">Brands</a>
+                  <a href="./cloth.html">All Women's</a>
+                  <a href="./cloth.html">Sale</a>
+                </div>
+            </div>
+            <input oninput="search()" type="text" placeholder="SEARCH(E.G.VALENTINO DRESSES)">
+        </div>
+    </div>
+
+    <div id="cloth">
+        <div>
+            <a href="./womens.html" target="_blank"><p>Clothing</p></a>
+            <a href="./womens.html" target="_blank"><p>Beachwear and swimwear outfits</p></a>
+            <a href="./womens.html" target="_blank"><p>Coats</p></a>
+            <a href="./womens.html" target="_blank"><p>Dresses</p></a>
+            <a href="./womens.html" target="_blank"><p>Hosiery</p></a>
+            <a href="./womens.html" target="_blank"><p>Jackets</p></a>
+            <a href="./womens.html" target="_blank"><p>Jeans</p></a>
+            <a href="./womens.html" target="_blank"><p>Jumpsuits and rompers</p></a>
+            <a href="./womens.html" target="_blank"><p>sweaters and knitwear</p></a>
+            <a href="./womens.html" target="_blank"><p>Lingerie</p></a>
+            <a href="./womens.html" target="_blank"><p>Nightwear and sleepwear</p></a>
+            <a href="./womens.html" target="_blank"><p>+More</p></a>
+        </div>
+        <div></div>
+    </div>
+</body>
+</html>
